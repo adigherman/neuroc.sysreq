@@ -11,7 +11,7 @@ You can install neuroc.sysreqs from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("adigherman/neuroc.sysreqs")
+devtools::install_github("adigherman/neuroc.sysreq")
 ```
 
 ## Usage
