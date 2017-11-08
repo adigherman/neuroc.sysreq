@@ -196,6 +196,7 @@ format_sysreq <- function(pkg, sysreqs_db) {
 #' @return a list with all system dependencies for \code{pkg}
 #'
 #' @importFrom utils read.csv
+#' @importFrom pkgload parse_deps
 #'
 #' @examples
 #' \dontrun{get_all_sysreqs('neuroconductor/ANTsR')}
@@ -216,7 +217,11 @@ get_all_sysreqs <- function(pkg) {
   sysreq_all <- lapply(sysreq_all, function(x) gsub(" ","", x))
   sysreq_all <- paste(sysreq_all,collapse=",")
   sysreq_all <- unique(strsplit(sysreq_all,","))
-  sysreq_all <- unlist(sysreq_all)
+  sysreq_all <- sort(unlist(sysreq_all))
+  sysreq_all <- paste(sysreq_all, collapse=", ")
+  sysreq_all <- gsub("[\\S\\(]","\\2 \\(",sysreq_all)
+  sysreq_all <- gsub("([\\>\\=]|[\\>])(\\d)","\\1 \\2",sysreq_all)
+  sysreq_all <- parse_deps(sysreq_all)
   return(sysreq_all)
 }
 
