@@ -14,4 +14,10 @@ You can install neuroc.sysreqs from github with:
 devtools::install_github("adigherman/neuroc.sysreqs")
 ```
 
+## Usage
+
+``` r
+neuroc.sysreq::get_all_sysreqs('neuroconductor/fslr')
+```
+
 
