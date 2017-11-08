@@ -7,11 +7,11 @@ The purpose of the `neuroc.sysreq` package is to provide a list of formatted sys
 
 ## Installation
 
-You can install neuroc.sysreqs from github with:
+You can install neuroc.sysreq from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("adigherman/neuroc.sysreqs")
+devtools::install_github("adigherman/neuroc.sysreq")
 ```
 
 ## Usage
