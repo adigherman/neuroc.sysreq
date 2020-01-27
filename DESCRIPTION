@@ -1,5 +1,5 @@
 Package: neuroc.sysreq
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Title: Gets a list with all system requirements
 Description: Recursively gets a list of all system dependencies and cross references it with the Neuroconductor list of formatted system requirements. 
 Authors@R: person("Adi", "Gherman", email = "adig@jhu.edu", role = c("aut", "cre"))
